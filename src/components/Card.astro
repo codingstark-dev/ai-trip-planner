@@ -2,14 +2,13 @@
 interface Props {
 	title: string;
 	body: string;
-	href: string;
 }
 
-const { href, title, body } = Astro.props;
+const { title, body } = Astro.props;
 ---
 
 <li class="link-card">
-	<a href={href}>
+	<a >
 		<h2>
 			{title}
 			<span>&rarr;</span>
@@ -21,6 +20,7 @@ const { href, title, body } = Astro.props;
 </li>
 <style>
 	.link-card {
+		  white-space: pre-wrap;
 		list-style: none;
 		display: flex;
 		padding: 1px;
